@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="">
+    <title>4조 이상형 월드컵 </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/the-big-picture.css" rel="stylesheet"> 
+<style>
+
+@font-face{
+font-family: hanna;
+src:url(BMJUA_ttf.ttf);
+}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,
+textarea,button,select{margin:0;padding:0;font-family : hanna;}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:none} <!--초기화-->
+
+body {
+background-color: #F3F1E9;
+}
+
+h1{   
+text-shadow : 5px 5px 5px #FF0000;
+text-align : center;
+font-size : 45px;
+font-style : italic;
+
+}
+
+	<meta name="Description" content="">
+   #main{
+      background:green;
+      position:absolute;
+      width:320pt;
+      top:10pt;
+      left:300pt;
+   }
+
+   #inputName{
+      background:#66ff66;
+      position:absolute;
+      width:320pt;
+      top:300pt;
+      left:570pt;
+      visibility:hidden;
+	  margin-bottom:10%;
+	  
+	  
+   }
+
+   #result{
+      background:#9966ff;
+      position:absolute;
+      width:320pt;
+      top:300pt;
+      left:600pt;
+      visibility:hidden;
+	  margin-bottom:10%;
+	  z-index:-1;
+	  
+   }
+
+.btn1 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/menu.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.close {
+  width: 50px;
+  height: 50px;
+  margin-left:33%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/close.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+#menu {
+  width: 150px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: -152px;
+  z-index: 10;
+  border: 1px solid #c9c9c9;
+  background-color: white;
+  text-align: center;
+  transition: All 0.2s ease;
+  -webkit-transition: All 0.2s ease;
+  -moz-transition: All 0.2s ease;
+  -o-transition: All 0.2s ease;
+}
+
+#menu.open {
+  left: 0px;
+}
+
+.page_cover.open {
+  display: block;
+}
+
+.page_cover {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 4;
+  display: none;
+}
+
+
+</style>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="#">이상형 월드컵에 오신것을 환영합니다.</a>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="홈페이지.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.gnu.ac.kr/main/">university page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://blog.naver.com/dlarlska">sing page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://catlas.gnu.ac.kr/">Catlas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <section>
+	<div class="btn1">
+</div>
+<div onclick="history.back();" class="page_cover"></div>
+<div id="menu">
+  <div onclick="history.back();" class="close"></div>
+  <br>
+		<br>
+			<div style="font-size:25px">이상형 월드컵</div>
+		<br>
+			<div><a href="극단적.html">극단적 월드컵</a></div>
+			<br>
+			<div><a href="남자.html">남자 월드컵</a></div>
+			<br>
+			<div><a href="여자.html">여자 월드컵</a></div>
+			<br>
+			<div><a href="음식.html">식사메뉴 월드컵</a></div>
+			<br>
+			<br>
+			<div style="font-size:25px">간단한 게임</div>
+			<br>
+			<div><a href="사다리.html">사다리 타기</div>
+			<br>
+			<div><a href="같은그림.html">같은그림 맞추기</div>
+			
+</div>
+      <div class="container">
+        <div class="row">
+<h1 style="font-size:100px"><a href="홈페이지.html">사다리 타기</a></h1>
+</br>
+<p align="center" style="font-size:50px">원하시는 인원수를 입력해주세요.</p>
+</br>
+	<div style='display:inline-black'>
+		<div id="main">   
+      <center>
+      <h3>사다리 게임</h3>
+       참가할 인원: <input type="text" id="num"/><br>
+      <input type="button" id="ok" value="확인"/>
+   </div>   
+   <div id="inputName" >   
+      <p id="show"></p>
+      <input type="button" id="start" value="사다리타기"/>
+
+   </div>
+   <div id="result">   
+      <p id="shResult"></p>
+
+   </div>
+	</div>
+	
+        </div>
+      </div>
+    </section>
+	
+</body>
+<script>
+$(".btn1").click(function() {
+  $("#menu,.page_cover,html").addClass("open");
+  window.location.hash = "#open";
+});
+
+window.onhashchange = function() {
+  if (location.hash != "#open") {
+    $("#menu,.page_cover,html").removeClass("open");
+  }
+};
+   var idNum = 0;
+   var arra=[];
+   var view = ["","ㅡ"];
+   var num=0;
+   window.onload=function(){
+
+      var ok=document.getElementById("ok")
+      var start=document.getElementById("start");
+       var moneys=[];
+
+      
+
+ 
+
+      ok.onclick=function(){
+         inputName.style.visibility="visible";
+         num=document.getElementById("num").value;
+         var show="<table border id='input'>";
+         show+="<tr><th>no</th><th>이름</th><th>항목</th></tr>"
+
+         for(var i=0; i<num; i++){
+            show+="<tr><td>"+(i+1)+"</td><td><input type='text' name='name'></td><td><input type='text' name='item'></td></tr>";
+         }
+         show+="</table>";
+         document.getElementById("show").innerHTML=show;         
+      }
+
+ 
+
+      start.onclick=function(){
+         inputName.style.visibility="hidden";
+         result.style.visibility="visible";
+         var name=document.getElementsByName("name");
+         var item=document.getElementsByName("item");
+         var show1="<h3>결과</h3><br>"
+         show1+="<table width='50' height='500' id='output' >"
+           show1+="<tr>";
+         for(var i=0; i<num; i++){
+            show1+="<td><input id = "+idNum+" type='button' name='b_name' value="+name[i].value+"></td>";
+            idNum++;
+            if(i!=num-1){
+               show1+="<td> </td>";
+               idNum++;
+         }
+         }
+
+      
+         for(var i=0; i<10; i++){
+            show1+="<tr>";
+            for(var j=0; j<num; j++){
+
+               arra[j]=parseInt(Math.random()*2);
+               show1+="<td>|</td>";
+               idNum++;
+
+               if(j!=num-1){
+                  if(j!=0&&(arra[j-1]==1)){
+                     arra[j]=0;
+                  }
+
+                  show1+="<td>"+view[arra[j]]+"</td>"; // 0 1 2
+               }
+            }
+            show1+="</tr>";
+         }
+
+         show1+="<tr>";
+         for(var i=0; i<num; i++){
+            show1+="<td>"+item[i].value+"</td>";
+            if(i!=num-1){
+               show1+="<td></td>";
+            }
+         }
+
+         show1+="</tr>";
+         show1+="</table>";
+         document.getElementById("shResult").innerHTML=show1;
+         var b_name = document.getElementsByName("b_name");
+         for(var i = 0; i <b_name.length; i++ ){
+            b_name[i].onclick=chResult;
+         }
+      }
+   }
+
+    
+
+   function chResult(){
+      var tr = document.getElementsByTagName("tr");
+      var i = parseInt(num)+2;
+      var j = parseInt(this.id);
+      var inter = null;
+      var finish=tr[i].childNodes[j].innerHTML;
+
+      tr[i].childNodes[j].innerHTML=3;
+
+      inter=setInterval(function(){
+
+               if(tr[i].childNodes[j-1]&&tr[i].childNodes[j-1].innerHTML=="ㅡ"){
+
+                  j=j-2;
+               }
+
+               else if(tr[i].childNodes[j+1]&&tr[i].childNodes[j+1].innerHTML=="ㅡ"){
+
+                  j=j+2;
+               }
+                  
+
+            finish=tr[++i].childNodes[j].innerHTML;
+            tr[i].childNodes[j].innerHTML=3;
+
+         if(finish!="|" && finish!="ㅡ"){
+            alert(finish);
+            clearInterval(inter);
+         }
+      },100);
+   }
+
+  </script>
+</html>

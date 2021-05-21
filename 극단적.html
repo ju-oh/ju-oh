@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>4조 이상형 월드컵</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/the.css" rel="stylesheet">
+<style>
+
+@font-face{
+font-family: hanna;
+src:url(BMJUA_ttf.ttf);
+}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,
+textarea,button,select{font-family : hanna;}
+
+div#level{
+text-align:center;
+margin: 10px;
+}
+div#poto1{
+width: 28em;
+height: 40em;
+float: left;
+background-image:url('1.jpg');
+margin-left:1%;
+margin-top:5%;
+background-size:100% 100%;
+padding: 0px;
+margin-bottom:10%;
+
+}
+div#poto1:hover{
+opacity:0.4;}
+
+div#poto2{
+padding: 0px;
+width: 28em;
+height: 40em;
+float: right;
+background-image:url('2.jpg');
+margin-right:1%;
+margin-top:5%;
+background-size:100% 100%;
+margin-bottom:10%;
+}
+div#poto2:hover{
+opacity:0.4;
+}
+
+div#result{
+padding: 0px;
+width: 28em;
+height: 40em;
+float: right;
+margin-right:5%;
+margin-top:5%;
+}
+
+div#vs{
+position: absolute;  
+  left: 46%; 
+  top:60%;
+  margin: auto; 
+  width:10em;
+  height:10em;
+  z-index:1;
+background-image:url('vs.png');
+background-repeat:no-repeat;
+background-size:100% 100%;
+animation: 1s myanim;
+animation-iteration-count: 2;
+}
+
+h1{  
+text-shadow : 5px 5px 5px #FF1111;
+text-align : center;
+font-size : 45px;
+font-style : italic;
+
+
+}
+.btn1 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/menu.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.close {
+margin-left:33%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/close.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+#menu {
+  width: 150px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: -152px;
+  z-index: 10;
+  border: 1px solid #c9c9c9;
+  background-color: white;
+  text-align: center;
+  transition: All 0.2s ease;
+  -webkit-transition: All 0.2s ease;
+  -moz-transition: All 0.2s ease;
+  -o-transition: All 0.2s ease;
+}
+
+#menu.open {
+  left: 0px;
+}
+
+.page_cover.open {
+  display: block;
+}
+
+.page_cover {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 4;
+  display: none;
+}
+@keyframes myanim
+{
+0% {width: 10em; height: 10em;}
+50% {width: 30em; height: 30em;}
+100% {width: 10em; height: 10em;}
+}
+@keyframes myanim1
+{
+0% {width: 28em; height: 40em;}
+50% {width: 56em; height: 80em;}
+100% {width: 28em; height: 40em;}
+}
+.poto1:hover{border:10px solid #fff;}
+</style>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="#">이상형 월드컵에 오신것을 환영합니다.</a>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="홈페이지.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.gnu.ac.kr/main/">university page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://blog.naver.com/dlarlska">sing page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://catlas.gnu.ac.kr/">Catlas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <section>
+		<div class="btn1">
+		</div>
+		<div onclick="history.back();" class="page_cover"></div>
+		<div id="menu">
+		<div onclick="history.back();" class="close"></div>
+			<br>
+		<br>
+			<div style="font-size:25px">이상형 월드컵</div>
+		<br>
+			<div><a href="극단적.html">극단적 월드컵</a></div>
+			<br>
+			<div><a href="남자.html">남자 월드컵</a></div>
+			<br>
+			<div><a href="여자.html">여자 월드컵</a></div>
+			<br>
+			<div><a href="음식.html">식사메뉴 월드컵</a></div>
+			<br>
+			<br>
+			<div style="font-size:25px">간단한 게임</div>
+			<br>
+			<div><a href="사다리.html">사다리 타기</div>
+			<br>
+			<div><a href="같은그림.html">같은그림 맞추기</div>
+		</div>
+      <div class="container">
+        <div class="row">
+		            <h1 style="font-size:100px" ><a href="홈페이지.html">극단적 이상형 월드컵</a></h1>
+					<br></br>
+			<div id="level" style="font-size:50px">32강</div>
+			<div id="poto1" onclick="clickDiv(0);"></div>
+			<div id="poto2" onclick="clickDiv(1);"></div>
+			<div id="result" style="display:none;">
+			<img src="이김1.gif" height="50%" style="margin-top:50%;"/>			
+			</div>
+			<div id="vs"> </div>
+          <div class="col-lg-6">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript">
+   var a32 = ['./극단적/1.jpg','./극단적/2.jpg','./극단적/3.jpg','./극단적/4.jpg','./극단적/5.jpg','./극단적/6.jpg','./극단적/7.jpg','./극단적/8.jpg','./극단적/9.jpg','./극단적/10.jpg',
+   './극단적/11.jpg','./극단적/12.jpg','./극단적/13.jpg','./극단적/14.jpg','./극단적/15.jpg','./극단적/16.jpg','./극단적/17.jpg','./극단적/18.jpg','./극단적/19.jpg','./극단적/20.jpg',
+   './극단적/21.jpg','./극단적/22.jpg','./극단적/23.jpg','./극단적/24.jpg','./극단적/25.jpg','./극단적/26.jpg','./극단적/27.jpg','./극단적/28.jpg','./극단적/29.jpg','./극단적/30.jpg','./극단적/31.jpg','./극단적/32.jpg'];
+   var a16 = [16], a8 = [8], a4 = [4], a2 = [2];
+    var gang = 32, k = 0, ch = -1;
+    var rannum = []; // 사진 random 배열   
+
+
+      function randomArray(n){
+       
+         // random값 추출 함수
+         function ranGenerator(max){
+            return Math.floor((Math.random() * max));
+         }
+         
+         //  강수 만큼 생성
+         for(var i = 0; i < n.valueOf(); i++){
+            rannum[i] = ranGenerator(n);
+            
+            // 사진 중복체크 
+            for(var j = 0; j < i; j++ ){
+               // 이전값과 비교하여 중복일경우 random 값 다시 생성
+               if(rannum[i] == rannum[j]){
+                  i = i - 1;
+                  break;
+               }
+            }
+		 }
+		}
+		
+		var arr1 = a32;
+		var arr2 = a16;
+		
+      
+       function clickDiv(ch){
+       if (gang == 1) {
+         return ;
+       }
+       if (gang == 2) {
+         if (ch == 0) endgame(arr1[rannum[k]]);
+         else if (ch == 1) endgame(arr1[rannum[k+1]]);
+         gang = 1;
+         return ;
+       }
+
+       if(k < gang){
+         if (ch == 0) arr2[k/2] = arr1[rannum[k]];
+         else if (ch == 1) arr2[k/2] = arr1[rannum[k+1]];
+       }
+       k = k + 2;
+
+       if(k >= gang) {
+          gang = gang / 2;
+          k = 0;
+          randomArray(gang);
+          document.getElementById("level").innerText = gang+"강";
+
+          if(gang==16){
+            arr1 = a16;
+            arr2 = a8;
+         }
+
+          else if(gang==8){
+            arr1 = a8;
+            arr2 = a4;
+         }
+
+          else if(gang==4){
+            arr1 = a4;
+            arr2 = a2;
+         }
+
+         else if(gang==2){
+           arr1 = a2;
+        }
+
+       }
+
+       document.getElementById("poto1").style = 'background-image:url('+arr1[rannum[k]]+');';
+       console.log("1번:"+k+"/"+rannum[k]);
+       document.getElementById("poto2").style = 'background-image:url('+arr1[rannum[k+1]]+');';
+       console.log("2번:"+(k+1)+"/"+rannum[k+1]);
+
+      }
+	  
+  		 
+	  function endgame(win){
+      document.getElementById("poto2").style.display = 'none';
+      document.getElementById("vs").style.display = 'none';
+      document.getElementById("level").innerText = "당신의 선택은!!!!";
+      document.getElementById("poto1").style = 'background-image:url('+win+'); opacity:1.0; animation: 2s myanim1; animation-iteration-count: 1;';
+      document.getElementById("result").style.display = 'inline-block';
+    }
+		 
+   
+      randomArray(gang);
+	  
+	  document.getElementById("poto1").style = 'background-image:url('+arr1[rannum[0]]+');';
+		 document.getElementById("poto2").style = 'background-image:url('+arr1[rannum[1]]+');';
+	  
+      
+
+</script>
+
+  </body>
+<script>
+$(".btn1").click(function() {
+  $("#menu,.page_cover,html").addClass("open");
+  window.location.hash = "#open";
+});
+
+window.onhashchange = function() {
+  if (location.hash != "#open") {
+    $("#menu,.page_cover,html").removeClass("open");
+  }
+};
+</script>
+</html>

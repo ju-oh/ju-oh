@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The Big Picture - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/the-big-picture.css" rel="stylesheet">
+<style>
+@font-face{
+font-family: hanna;
+src:url(BMJUA_ttf.ttf);
+}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,
+textarea,button,select{margin:0;padding:0;font-family : hanna;}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:none} <!--초기화-->
+
+body {
+background-color: #F3F1E9;
+}
+h1{   <!--h1값-->
+background-color :green;
+text-shadow : 5px 5px 5px #FF0000;
+text-align : center;
+font-size : 45px;
+font-style : italic;
+
+}
+.text{
+   width: 400px;
+   height: 400px;
+   display: inline-block;
+}
+#text1{
+   background-image: url("극단적.png");
+   background-size:100% 100%;
+}
+#text2{
+   margin-left:25%;
+   background-image: url("식사메뉴.png") ;
+   background-size:100% 100%;
+   }
+#text3{
+   margin-top:25%;
+   background-image: url("남자.png");
+   background-size:100% 100%;
+}
+#text4{
+   margin-left:25%;
+   background-image: url("여자.png");
+   background-size:100% 100%;
+}
+.btn1 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/menu.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.close {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/close.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+#menu {
+  width: 150px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: -152px;
+  z-index: 10;
+  border: 1px solid #c9c9c9;
+  background-color: white;
+  text-align: center;
+  transition: All 0.2s ease;
+  -webkit-transition: All 0.2s ease;
+  -moz-transition: All 0.2s ease;
+  -o-transition: All 0.2s ease;
+}
+
+#menu.open {
+  left: 0px;
+}
+
+.page_cover.open {
+  display: block;
+}
+
+.page_cover {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 4;
+  display: none;
+}
+.heart {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  animation: fave-heart 1s steps(28);
+}
+.heart:hover {
+  background-position: -2800px 0;
+  transition: background 1s steps(28);
+
+}
+#heart1{
+   margin-left:200px;
+   margin-top:40px;
+}
+#heart2{
+   margin-left:600px;
+}
+#heart3{
+   margin-top:40px;
+   margin-left:200px;
+}
+#heart4{
+   margin-left:600px;
+}
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2800px 0;
+  }
+}
+#target{
+position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+
+}
+#target img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+z-index:-1;
+opacity:0.8;
+html.open {
+  overflow: hidden;
+}
+
+</style>
+  </head>
+
+  <body bgcolor="#FFFFFF" text="#333333" link="#006699" vlink="#006699" alink="#006699" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="overflow:auto" onLoad="init();">
+<table width="600" border="0" cellpadding="0" cellspacing="0" style=margin-left>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="#">이상형 월드컵에 오신것을 환영합니다.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="홈페이지.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.gnu.ac.kr/main/">university page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://blog.naver.com/dlarlska">sing page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://catlas.gnu.ac.kr/">Catlas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <section>
+   <div class="btn1">
+</div>
+<div onclick="history.back();" class="page_cover"></div>
+<div id="menu">
+  <div onclick="history.back();" class="close"></div>
+  <br>
+      <br>
+         <div style="font-size:25px">이상형 월드컵</div>
+      <br>
+         <div><a href="극단적.html">극단적 월드컵</a></div>
+         <br>
+         <div><a href="남자.html">남자 월드컵</a></div>
+         <br>
+         <div><a href="여자.html">여자 월드컵</a></div>
+         <br>
+         <div><a href="음식.html">식사메뉴 월드컵</a></div>
+         <br>
+         <br>
+         <div style="font-size:25px">간단한 게임</div>
+         <br>
+         <div><a href="사다리.html">사다리 타기</div>
+		 <br>
+			<div><a href="사다리.html">같은그림 맞추기</div>
+</div>
+      <div class="container">
+        <div class="row">
+<h1 style="font-size:100px"><a href="홈페이지.html">같은그림 맞추기</a></h1>
+</br>
+<p align="center" style="font-size:50px">빠른시간안에 그림을 맞춰주세요!</p>
+</br>
+   <div style='display:inline-black'>
+      <table width="600" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="565"> <div align="center">
+        <p>&nbsp;</p><table width="330"  border="0" cellpadding="0" cellspacing="0" bordercolor="#336699" bgcolor="#669999" style="margin-left: 130%;">
+          <tr>
+            <td width="398"> <canvas id="canvas" width="400" height="180">
+              <font color="#FFFFFF">this browser can't activate HTML5 canvas element. </font>
+            </canvas>
+            <form name="f" id="f" onSubmit="return restart();">
+                <font color="#FFFFFF"> 맞춘 숫자:
+                <input type="text" name="count" value="0" size="1"/>
+                <br/>
+                걸린 시간:
+                <input type="text" name="elapsed" value="" size="4"/>
+                초<br/>
+                <input name="submit" type="submit" value="재시작" />
+                </font>
+              </form>
+
+        </table>
+        <p>&nbsp;</p>
+        </div></td>
+  </tr>
+</table>
+   </div>
+
+        </div>
+      </div>
+    </section>
+
+</body>
+<script>
+$(".btn1").click(function() {
+  $("#menu,.page_cover,html").addClass("open");
+  window.location.hash = "#open";
+});
+
+window.onhashchange = function() {
+  if (location.hash != "#open") {
+    $("#menu,.page_cover,html").removeClass("open");
+  }
+};
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+A:link {text-decoration:none}
+A:visited {text-decoration:none}
+A:active {text-decoration:none}
+
+</style>
+<style type="text/css">
+form{
+   width: 325px;
+   margin: 10px; padding: 20px;
+   background-color: #447777;
+}
+
+
+canvas{position: relative; cursor: crosshair;}
+</style>
+<script type="text/javascript">
+var ctx;
+var cwidth=400; var cheight=180;
+var firstPick=true;
+var firstCard, secondCard;
+var frontBgColor="rgb(251,215,73)"; //카드 글꼴 배경색
+var polyColor="rgb(254,11,0)"; //다각형 색상
+var backColor="rgb(34,53,69)"; //카드 뒷면 색상
+var tableColor="#669999"; //보드 색상
+var cardRad=15; //다각형 반경
+var deck=[]; //패 저장용 배열
+var firstSx=30, firstSy=20; //첫 카드 위치
+var margin=8; //카드 간격
+var cardWidth=4*cardRad; //카드 너비를 다각형 반경의 4배로.
+var cardHeight=4*cardRad;
+var matched;
+var startTime;
+var cardAvailable=true; //정지기간 중 카드 선택 못하게 하기위한 변수
+
+function Card(sx,sy,swidth,sheight,info){
+   this.sx=sx; this.sy=sy;
+   this.swidth=swidth;
+   this.sheight=sheight;
+   this.info=info;
+   this.draw=drawBack;
+}
+
+function makeDeck(){ //카드 덱 만들기
+   var aCard, bCard;
+   var cx=firstSx, cy=firstSy;
+   for(var i=3; i < 8; i++){ //삼각형에서 7각형까지 만들기
+      aCard=new Card(cx,cy,cardWidth,cardHeight,i);
+      deck.push(aCard);
+      //aCard의 아랫쪽에 생성
+      bCard=new Card(cx,cy+cardHeight+margin,cardWidth,cardHeight,i);
+      deck.push(bCard);
+      cx=cx+cardWidth+margin;//카드 너비, 마진을 감안해 증가
+      aCard.draw(); //캔버스에 카드 그리기
+      bCard.draw();
+   }
+   shuffle(); //카드 섞기 함수 호출
+}
+
+function shuffle(){ //카드 섞기
+   var i, k;
+   var holder;
+   var dl=deck.length; //배열 길이 저장 변수
+   var nt; //패의 카드 수 저장 변수
+   for (nt=0; nt < 3*dl; nt++){ //카드 덱 길이의 3배 실행
+      i=Math.floor(Math.random()*dl);
+      k=Math.floor(Math.random()*dl);
+      holder = deck[i].info;
+      deck[i].info = deck[k].info;
+      deck[k].info = holder;
+   }
+}
+
+function PolyCard(sx,sy,rad,n){ //다각형 생성함수
+   this.sx=sx, this.sy=sy;
+   this.rad=rad;
+   this.draw=drawPoly;
+   this.n=n; //변의 수
+   this.angle=(2*Math.PI)/n; //다각형에 따락 각도 결정
+}
+
+function drawPoly(){
+   ctx.fillStyle=frontBgColor;
+   //사각형의 모서리가 다각형 중심의 왼쪽 위에 있음
+   ctx.fillRect(this.sx-2*this.rad, this.sy-2*this.rad,4*this.rad,4*this.rad);
+   ctx.beginPath();
+   ctx.fillStyle=polyColor;
+   var rad=this.rad;
+   //다각형의 첫번째 점으로 이동.
+   ctx.moveTo(this.sx+rad*Math.cos(-0.5*this.angle),this.sy+rad*Math.sin(-0.5*this.angle));
+   for(var i=1; i < this.n; i++){
+      //다각형 선 그리기
+      ctx.lineTo(this.sx+rad*Math.cos((i-0.5)*this.angle),this.sy+rad*Math.sin((i-0.5)*this.angle));
+   }
+   ctx.fill(); //패스 채우기
+}
+
+function drawBack(){
+   ctx.fillStyle=backColor;
+   ctx.fillRect(this.sx,this.sy,this.swidth,this.sheight);
+}
+
+function choose(ev){ //마우스로 카드 선택시 처리 함수
+   var mx, my; //마우스 x,y 저장 변수
+   var pick1, pick2; //다각형 객체참조 저장용
+   if(ev.layerX || ev.layerX==0){
+      mx=ev.layerX;
+      my=ev.layerY;
+   }else if(ev.offsetX || ev.offsetX==0){
+      mx=ev.offsetX;
+      my=ev.offsetY;
+   }
+   for(var i=0; i < deck.length; i++){ //카드덱 전체 순회
+      var card=deck[i];
+      if(card.sx >= 0) //제거된 카드인지 검사
+      if(cardAvailable) //카드 선택이 가능한지 검사
+         //마우스가 카드위에 있는지 검사
+      if((mx>card.sx)&&(mx<card.sx+card.swidth)&&(my>card.sy)&&(my<card.sy+card.sheight)){
+         //첫번째 고른 카드이거나 처음 누른 것과 같은 카드가 아니면
+         if((firstPick) || (i!=firstCard)) break;
+      }
+   }
+   if(i < deck.length){
+      if(firstPick){ //첫번째 고른 카드일 경우
+         firstCard = i;
+         firstPick = false;
+         pick1=new PolyCard(card.sx+cardWidth*0.5,card.sy+cardHeight*0.5,cardRad,card.info);
+         pick1.draw();
+      }else{ //두번째 고른 카드일 경우
+         secondCard = i;
+         pick2=new PolyCard(card.sx+cardWidth*0.5,card.sy+cardHeight*0.5,cardRad,card.info);
+         pick2.draw();
+         if(deck[i].info==deck[firstCard].info){ //같은 카드이면
+            matched=true;
+            //일치횟수 증가시키고 form에 표시하기
+            var nm=1+Number(document.f.count.value);
+            document.f.count.value=String(nm);
+            if(nm >= 0.5*deck.length){ //카드를 모두 맞췄을 경우
+               setTimeout(finish,1500); //1.5초뒤에 엔딩처리 함수 호출
+            }
+         }else{ //같은 카드가 아닐경우
+            matched=false;
+         }
+         firstPick=true;
+         cardAvailable=false; //정지중 카드 선택 못하게 하기
+         setTimeout(flipBack, 1000); //잠시 정지
+      }
+   }
+}
+
+function finish(){ //엔딩 처리
+   var now=new Date();
+   var nt=Number(now.getTime());
+   var seconds=Math.floor(0.5+(nt-startTime)/1000);
+   document.f.elapsed.value=String(seconds);
+
+   ctx.fillStyle=tableColor;
+   ctx.fillRect(0,0,cwidth,cheight);
+
+   ctx.fillStyle="white";
+   ctx.font="bold 30px Accent";
+   ctx.fillText("All Clear!",50,70);
+   ctx.font="bold 20px sans-serif";
+   ctx.fillText("Clear Time is "+seconds+" seconds",50,130);
+}
+
+function flipBack(){
+   if(!matched){ //카드가 일치되지 않았을 경우
+      deck[firstCard].draw();
+      deck[secondCard].draw();
+   }else{//카드가 일치할 경우
+      ctx.fillStyle=tableColor;
+      //일치한 카드 배경색의 사각형으로 덮어 안보이게 하기
+      ctx.fillRect(deck[secondCard].sx,deck[secondCard].sy,deck[secondCard].swidth,deck[secondCard].sheight);
+      ctx.fillRect(deck[firstCard].sx,deck[firstCard].sy,deck[firstCard].swidth,deck[firstCard].sheight);
+      //일치한 카드 선택 못하도록 설정
+      deck[secondCard].sx= -1;
+      deck[firstCard].sx= -1;
+   }
+   cardAvailable=true;
+}
+
+function init(){
+   ctx=document.getElementById('canvas').getContext('2d');
+   canvas1=document.getElementById('canvas');
+   canvas1.addEventListener('click',choose,false);
+   ctx.fillStyle=tableColor;
+   ctx.fillRect(0,0,cwidth,cheight);
+   makeDeck();
+   document.f.count.value="0";
+   document.f.elapsed.value="";
+   startTime=new Date();
+   startTime=Number(startTime.getTime());
+   shuffle();
+}
+
+function restart(){
+   init();
+}
+</script>
+</html>

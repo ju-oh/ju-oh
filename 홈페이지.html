@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8"> <!-- 유니코드-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>4조 이상형 월드컵</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!--부트스트렙 링크 : 하단 메뉴바-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> <!--제이커리 링크 : 좌측 슬라이드 메뉴바-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/the-big-picture.css" rel="stylesheet">
+<style>
+@font-face{  
+font-family: hanna;
+src:url(BMJUA_ttf.ttf);
+}  
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,
+textarea,button,select{margin:0;padding:0;font-family : hanna;}
+img,fieldset{border:0} 
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:none} 
+
+/*h1 css적용*/
+h1{  
+text-shadow : 5px 5px 5px #FF0000;
+text-align : center;
+font-size : 45px;
+font-style : italic;
+}
+/*바탕화면의 4개의 그림에 대한 CSS text는 inline으로 설정해서 div로 나눳을때 한줄이 다차지 않게함*/
+.text{
+	width: 400px;
+	height: 400px;
+	display: inline-block;
+}
+#text1{
+	background-image: url("극단적.png");
+	background-size:100% 100%;
+}
+#text2{
+	margin-left:25%;
+	background-image: url("식사메뉴.png") ;
+	background-size:100% 100%;
+	}
+#text3{
+	margin-top:25%;
+	background-image: url("남자.png");
+	background-size:100% 100%;
+}
+#text4{
+	margin-left:25%;
+	background-image: url("여자.png");
+	background-size:100% 100%;
+}
+/*좌측 메뉴바에 대한 CSS */
+/*메뉴바 버튼*/
+.btn1 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/menu.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+/*닫기버튼*/
+.close {
+margin-left:33%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/close.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+/*메뉴의 틀
+ transition 은 마우스 오버시 자바스크립트나 플래시 없이 div에 어떠한 액션을 줄때 사용하는 CSS.*/
+#menu {
+  width: 150px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: -152px;
+  z-index: 10;
+  border: 1px solid #c9c9c9;
+  background-color: white;
+  text-align: center;
+  transition: All 0.2s ease;
+  -webkit-transition: All 0.2s ease;
+  -moz-transition: All 0.2s ease;
+  -o-transition: All 0.2s ease;
+}
+
+#menu.open {
+  left: 0px;
+}
+
+.page_cover.open {
+  display: block;
+}
+
+.page_cover {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 4;
+  display: none;
+}
+/*하트에 관한 CSS cursor는 포인터*/
+.heart {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  animation: fave-heart 1s steps(28);
+}
+.heart:hover {
+  background-position: -2800px 0;
+  transition: background 1s steps(28);
+  
+}
+#heart1{
+	margin-left:200px;
+	margin-top:40px;
+}
+#heart2{
+	margin-left:600px;
+}
+#heart3{
+	margin-top:40px;
+	margin-left:200px;
+}
+#heart4{
+	margin-left:600px;
+}
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2800px 0;
+  }
+}
+
+</style>
+  </head>
+
+  <body>
+
+    <!-- 하단메뉴바 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="#">이상형 월드컵에 오신것을 환영합니다.</a>   
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="홈페이지.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.gnu.ac.kr/main/">university page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://blog.naver.com/dlarlska">sing page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://catlas.gnu.ac.kr/">Catlas</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <!-- 페이지 전체 -->
+    <section>
+	<div class="btn1">
+</div>
+<!-- 좌측 메뉴바 구현 -->
+<div onclick="history.back();" class="page_cover"></div>
+<div id="menu">
+  <div onclick="history.back();" class="close"></div>
+  <br>
+		<br>
+			<div style="font-size:25px">이상형 월드컵</div>
+		<br>
+			<div><a href="극단적.html">극단적 월드컵</a></div>
+			<br>
+			<div><a href="남자.html">남자 월드컵</a></div>
+			<br>
+			<div><a href="여자.html">여자 월드컵</a></div>
+			<br>
+			<div><a href="음식.html">식사메뉴 월드컵</a></div>
+			<br>
+			<br>
+			<div style="font-size:25px">간단한 게임</div>
+			<br>
+			<div><a href="사다리.html">사다리 타기</div>
+			<br>
+			<div><a href="같은그림.html">같은그림 맞추기</div>
+</div>
+      <div class="container">
+        <div class="row">
+		<!-- 페이지 중앙 -->
+<h1 style="font-size:100px"><a href="홈페이지.html">취향저격 이상형 월드컵</a></h1>
+</br>
+<p align="center" style="font-size:50px">원하시는 이상형 월드컵 하단의 하트를 눌러주세요~</p>
+</br>
+	<div style='display:inline-black'>
+		<div class="text" id="text1"></div>
+		<div class="text" id="text2"></div>
+		<div class="heart" id="heart1" onclick='location.href="극단적.html"'></div>	
+		<div class="heart" id="heart2" onclick='location.href="음식.html"'></div>
+		<div class="text" id="text3"></div>
+		<div class="text" id="text4"></div>
+		<div class="heart" id="heart3" onclick='location.href="남자.html"'></div>
+		<div class="heart" id="heart4" onclick='location.href="여자.html"'></div>
+	</div>
+	
+        </div>
+      </div>
+    </section>
+	
+</body>
+<script>
+//메뉴바 누를시 자바스크립트
+$(".btn1").click(function() { 
+  $("#menu,.page_cover,html").addClass("open");
+  window.location.hash = "#open";
+});
+
+window.onhashchange = function() {
+  if (location.hash != "#open") {
+    $("#menu,.page_cover,html").removeClass("open");
+  }
+};
+</script>
+</html>
