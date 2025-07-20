@@ -1,7 +1,7 @@
 ## Hi there 👋
 
 
-**ju-oh/ju-oh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+(현재 정리중 입니다.) is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
